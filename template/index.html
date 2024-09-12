@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <form action="{% url 'resposta' %}" method="post"> {% csrf_token %}
+        <input type="number" name="a">
+        <label>Yn+2 + </label>
+        <input type="number" name="b">
+        <label>Yn+1 + </label>
+        <input type="number" name="c">
+        <label>Yn</label>
+
+        <button type="submit" value="enviar"> Enviar</button>
+    </form>
+</body>
+
+</html>
