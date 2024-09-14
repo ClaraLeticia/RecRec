@@ -1,0 +1,134 @@
+/* Estilização geral */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilização básica */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilização do header */
+header {
+    width: 100%;
+    background-color: #4aa28a;
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+header h2 {
+    font-size: 1.25rem;
+    color: #eee;
+    margin-bottom: 1rem;
+}
+
+/* Estilização do container principal */
+main {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: #f0f0f0;
+}
+
+@media (min-width: 1200px) {
+    main {
+        width: 60%;
+    }
+}
+
+/* Estilização do formulário */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.form-inputs input {
+    width: 4rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    text-align: right;
+    transition: width 0.3s ease;
+}
+
+.form-inputs input::-webkit-outer-spin-button,
+.form-inputs input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.form-inputs input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+label {
+    pointer-events: none;
+}
+
+form button {
+    padding: 10px 4rem;
+    margin-top: 1rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização da resposta */
+main h3 {
+    text-align: center;
+}
+.resposta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    padding: 1rem;
+    background-color: #f0f0f0;
+
+}
