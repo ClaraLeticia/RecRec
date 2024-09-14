@@ -2,21 +2,43 @@
 <html>
 
 <head>
-    <title>Calculadora</title>
+    <title>RecRec</title>
+    <meta name="description" content="Aplicação Web para resolução de equações de recorrência de 2ª ordem">
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js">
+    </script>
 </head>
 
 <body>
 
-    <form action="{% url 'resposta' %}" method="post"> {% csrf_token %}
-        <input type="number" name="a">
-        <label>Yn+2 + </label>
-        <input type="number" name="b">
-        <label>Yn+1 + </label>
-        <input type="number" name="c">
-        <label>Yn</label>
+        <form action="{% url 'index' %}" method="post"> {% csrf_token %}
+            <h3>Equação de recorrência de 2ª ordem</h3>
 
-        <button type="submit" value="enviar"> Enviar</button>
-    </form>
+            <div class="form-inputs">
+                <input type="number" name="a" placeholder="a" required>
+                <label>\(\lambda_{n+2} + \)</label>
+                <input type="number" name="b" placeholder="b" required>
+                <label">\(\lambda_{n+1} + \)</label=>
+                <input type="number" name="c" placeholder="c" required>
+                <label">\(\lambda_n\)</label=>
+                <span> \(= 0\)</span>
+            </div>
+    
+            <button type="submit" value="enviar"> Calcular </button>
+        </form>
+    
+        {% if delta is not None %}
+        <h3>Resultado</h3>
+        <div class="resposta" name="resposta">
+            {% if delta > 0 %}
+            <p>\[a_n = C1 ({{r1}})^n\]</p>
+            <p>\[+\]</p>
+            <p>\[C2 ({{r2}})^n\]</p>
+            {% else %}
+            <p>\[a_n = C1 ({{r1}})^n + C2 n({{r2}})^n\]</p>
+            {% endif %}
+        </div>
+        {% endif %}
 </body>
 
 </html>

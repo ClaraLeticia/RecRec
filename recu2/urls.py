@@ -19,6 +19,4 @@ from app_recu2 import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('resposta/', views.reposta, name='resposta')
-    
 ]
