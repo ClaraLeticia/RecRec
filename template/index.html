@@ -41,8 +41,10 @@
             <p>\[a_n = C1 ({{r1}})^n\]</p>
             <p>\[+\]</p>
             <p>\[C2 ({{r2}})^n\]</p>
-            {% else %}
+            {% elif delta == 0 %}
             <p>\[a_n = C1 ({{r1}})^n + C2 n({{r2}})^n\]</p>
+            {% else %}
+            <p>\[a_n = {{p}}^n(C1cos(n{{alpha}}) + C2sen(n{{alpha}})) \]</p>
             {% endif %}
         </div>
         {% endif %}
